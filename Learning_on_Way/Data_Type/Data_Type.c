@@ -220,7 +220,8 @@ int main()
        printf("【13. 数组类型】\n");
 
        int numbers[5] = {1, 2, 3, 4, 5}; // 整型数组
-       char message[20] = "Hello, C!";   // 字符数组（字符串）
+       char message[10] = "Hello, C!";   // 字符数组（字符串）
+       // 注意：message数组大小为10，但字符串长度超过10，可能导致溢出，实际使用时应确保足够大
 
        printf("整型数组 numbers: ");
        for (int i = 0; i < 5; i++)

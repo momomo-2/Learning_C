@@ -1,8 +1,12 @@
-/*
- * C 语言格式说明符完全指南与实践
+/**
+ * @file c_format_specifiers_complete_guide.c
+ * @author momomo
+ * @brief c_format_specifiers_complete_guide
+ * @version 0.1
+ * @date 2026-06-20
  *
- * 本文档旨在提供一个全面、实用的 C 语言格式说明符参考，
- * 适用于初学者和需要快速查阅的开发者。
+ * @copyright Copyright (c) 2026
+ *
  */
 
 #include <stdio.h>

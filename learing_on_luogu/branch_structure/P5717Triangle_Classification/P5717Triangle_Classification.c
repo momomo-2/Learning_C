@@ -10,6 +10,29 @@
  */
 #include <stdio.h>
 
+/**
+ * @brief 对数组进行降序冒泡排序
+ * 
+ * @param arr 待排序的数组
+ * @param size 数组大小
+ */
+void bubble_sort_desc(int arr[], int size)
+{
+    int i, j, mid;
+    for (i = 0; i < size - 1; i++)
+    {
+        for (j = 0; j < size - 1 - i; j++)
+        {
+            if (arr[j] < arr[j + 1])
+            {
+                mid = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = mid;
+            }
+        }
+    }
+}
+
 int main()
 {
     int a, b, c;
@@ -24,20 +47,8 @@ int main()
 
     int num[3] = {a, b, c};
 
-    // 完整的冒泡排序，确保 num[0] >= num[1] >= num[2]
-    int i, j, mid;
-    for (i = 0; i < 2; i++)
-    {
-        for (j = 0; j < 2 - i; j++)
-        {
-            if (num[j] < num[j + 1])
-            {
-                mid = num[j];
-                num[j] = num[j + 1];
-                num[j + 1] = mid;
-            }
-        }
-    }
+    // 调用冒泡排序函数，确保 num[0] >= num[1] >= num[2]
+    bubble_sort_desc(num, 3);
 
     // 使用排序后的值进行判断
     int max_side = num[0];
